@@ -8,10 +8,13 @@ st.header("Analisis de datos ventas de vehiculos")
 
 
 
-hist_button = st.button('construir histograma')
+#hist_button = st.button('construir histograma')
 disp_button = st.button('construir grafico de dispersion')
 
-if hist_button:
+build_histogram = st.checkbox('Construir un histograma')
+
+if build_histogram:
+#if hist_button:
     st.write("construccion del histograma para el conjunto de datos")
     fig = go.Figure(data = [go.Histogram(x = vehicles['odometer'])])
     fig.update_layout(title_text = 'Distribucion del Odometro')
